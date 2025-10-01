@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            overflow: hidden;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .header .back-arrow {
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+        .section {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        .shipping-address {
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .shipping-address .icon {
+            margin-right: 10px;
+            color: #ff6600;
+        }
+        .shipping-address .details p {
+            margin: 0;
+            line-height: 1.5;
+            color: #333;
+        }
+        .shipping-address .edit-icon {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: #888;
+            cursor: pointer;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .form-group input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+        }
+        .form-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .form-row .form-group {
+            flex: 1;
+            margin-bottom: 0;
+        }
+        .save-button {
+            background-color: #ff6600;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            width: 100%;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .save-button:hover {
+            background-color: #e65c00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span class="back-arrow">&lt;</span>
+            <span>Checkout</span>
+            <div></div> <!-- Spacer for alignment -->
+        </div>
+
+        <div class="section">
+            <div class="section-title">Shipping</div>
+            <div class="shipping-address">
+                <span class="icon">&#127969;</span> <!-- Home icon -->
+                <div class="details">
+                    <p>+ 000 000 000 00</p>
+                    <p>New York, 2022</p>
+                    <p>B road #16</p>
+                </div>
+                <span class="edit-icon">&#9998;</span> <!-- Edit icon -->
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Add a New Address</div>
+            <form>
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name">
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Phone Number">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" placeholder="Pincode">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="State">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" placeholder="City">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="House">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Road, Area, Building Name">
+                </div>
+                <button type="submit" class="save-button">Save and Next</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
