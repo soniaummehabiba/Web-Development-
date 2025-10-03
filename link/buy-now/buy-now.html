@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beef Burger Product Page</title>
+    
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            background-color: #f8f8f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 90vh;
+        }
+        .product-card {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 400px;
+            padding: 20px;
+            text-align: center;
+        }
+        .header-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .header-buttons button {
+            background: none;
+            border: 1px solid #eee;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .product-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .price-quantity {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .quantity-controls button {
+            background-color: #ff6a00;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+        .product-title {
+            font-size: 28px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .product-subtitle {
+            font-size: 18px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+        .rating {
+            color: #ffc107; /* Yellow star color */
+            margin-bottom: 20px;
+        }
+        .description {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .action-buttons button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        .buy-now {
+            background-color: #ff6a00;
+            border: 1px solid #ff6a00;
+            color: white;
+        }
+        .add-to-cart {
+            background-color: #ff6a00;
+            border: 1px solid #ff6a00;
+            color: white;
+        }
+        .action-buttons a:active .add-to-cart {
+            background-color:#FFFEFA;
+            color: white;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Store the base price and quantity in variables
+            const basePrice = 5.40;
+            let currentQuantity = 1;
+
+            // Get the HTML elements that we will change
+            const quantityDisplay = document.getElementById('quantity-display');
+            const priceDisplay = document.getElementById('price-display');
+            const minusButton = document.getElementById('minus-button');
+            const plusButton = document.getElementById('plus-button');
+
+            // Function to update the quantity
+            function updateQuantity(change) {
+                const newQuantity = currentQuantity + change;
+                
+                if (newQuantity >= 1) {
+                    currentQuantity = newQuantity;
+                    quantityDisplay.textContent = currentQuantity;
+                    
+                    const newPrice = basePrice * currentQuantity;
+                    priceDisplay.textContent = `$${newPrice.toFixed(2)}`;
+                }
+            }
+
+            // Add event listeners to the buttons
+            minusButton.addEventListener('click', function() {
+                updateQuantity(-1);
+            });
+            plusButton.addEventListener('click', function() {
+                updateQuantity(1);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="product-card">
+        <div class="header-buttons">
+            <button> &lt; </button> <!-- Back button -->
+            <button> &hearts; </button> <!-- Heart icon for favorite -->
+        </div>
+        <img src="C:\Users\hp\Desktop\link\buy-now\images\download-removebg-preview.png" alt="Beef Burger - Double Beef" class="product-image">
+        <div class="price-quantity">
+            <div class="quantity-controls">
+                <button id="minus-button">-</button>
+                <span id="quantity-display">1</span>
+                <button id="plus-button">+</button>
+            </div>
+            <span id="price-display" style="font-size: 24px; font-weight: bold;">$5.40</span>
+        </div>
+        <h1 class="product-title">Beef Burger</h1>
+        <h2 class="product-subtitle">Double Beef</h2>
+        <div class="rating">
+            <span style="font-size: 20px;">★</span> (4.8)
+        </div>
+        <p class="description">
+           The top and bottom halves of a toasted bun encasing the burger, with Sliced tomatoes, onions, and lettuce leaves are visible.
+           <a href="#"> Read More... </a>
+        </p>
+        <div class="action-buttons">
+            <a href="C:\Users\hp\Desktop\link\promotion-card\promotion-card.html"> 
+                <button class="buy-now">Buy Now</button>
+            </a>
+            <a href="C:\Users\hp\Desktop\link\checkout\checkout.html">
+                <button class="add-to-cart">Add to Cart</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
