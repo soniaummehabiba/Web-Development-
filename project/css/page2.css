@@ -1,0 +1,30 @@
+.pricing-container {
+    display: flex; /* Cards ko ek line mein layega */
+    justify-content: center; /* Center mein align karega */
+    gap: 20px; /* Cards ke darmiyan fasla */
+    padding: 20px;
+}
+
+.pricing-card {
+    background-color: #fff; /* Sufaid background */
+    border-radius: 8px; /* Kinaron ko gol karega */
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Halka saya (shadow) */
+    flex: 1; /* Jagah barabar taqseem karega */
+    max-width: 300px;
+}
+
+.starter-card {
+    border-top: 5px solid #00a3e0; /* Upar neeli patti */
+}
+/* ... professional aur enterprise cards ke liye bhi rang define karein ... */
+
+.cta-button {
+    background-color: #ff7a59; /* Orange rang */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; /* Pointer icon */
+    width: 100%;
+}

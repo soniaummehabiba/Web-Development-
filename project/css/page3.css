@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f6f9fc;
+  margin: 0;
+  padding: 40px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin-bottom: 40px;
+}
+
+.subtitle a {
+  color: #00a4bd;
+  text-decoration: none;
+}
+
+.pricing-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  width: 300px;
+  padding: 30px;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.highlight {
+  border: 2px solid #5972ff;
+}
+
+.starts {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.billing {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.cta {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: #5972ff;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}

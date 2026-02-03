@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+.form-container {
+  width: 500px;
+  background: #ADD8E6	;
+  margin: 40px auto;
+  padding: 30px;
+  border: 1px solid black;
+}
+
+h1 {
+  color: gray
+  margin-bottom: 5px;
+}
+
+p {
+  color: gray;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid gray;
+  border-radius: 3px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background: white;
+  border: 1px solid #333;
+  cursor: pointer;
+}
